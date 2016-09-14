@@ -15,4 +15,4 @@ def run():
     """
     # This is not idempotent yet, but the run() method in edxmako clears it, so we are safe for now
     # TODO: make this safe without the need for edxmako
-    add_lookup('main', settings.TEMP_PATH)
+    add_lookup('main', settings.TEMPLATES_PATH)

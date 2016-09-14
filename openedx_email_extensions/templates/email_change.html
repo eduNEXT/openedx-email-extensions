@@ -1,0 +1,47 @@
+## mako
+<%!
+from microsite_configuration import microsite
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+from django.utils.translation import ugettext as _
+from openedx.conf import settings
+%>
+<%inherit file="layout/one_call_to_action.html" />
+
+<%block name="title">
+  ${_("Request to change email")}
+</%block>
+
+<%block name="msg_header">
+  ${_("Request to change email")}
+  <br/>
+</%block>
+
+<%block name="msg_content" >
+${_("We received a request to change the e-mail associated with your "
+    "{platform_name} account from {old_email} to {new_email}. "
+    "If this is correct, please confirm your new e-mail address by "
+    "visiting:").format(
+        platform_name=configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME),
+        old_email=old_email,
+        new_email=new_email
+    )
+}
+
+  <br/>
+  <br/>
+
+${_("If you didn't request this, you don't need to do anything; you won't "
+  "receive any more email from us. Please do not reply to this e-mail; "
+  "if you require assistance, check the help section of the "
+  "{platform_name} web site.").format(platform_name=configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME))}
+</%block>
+
+<%block name="call_to_action_href">
+    % if is_secure:
+     https://${ site }/email_confirm/${ key }
+    % else:
+     http://${ site }/email_confirm/${ key }
+    % endif
+</%block>
+
+<%block name="call_to_action_label">${_("Confirm change")}</%block>

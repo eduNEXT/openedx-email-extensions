@@ -1,0 +1,21 @@
+## mako
+<%!
+    from django.utils.translation import ugettext as _
+    from microsite_configuration import microsite
+%>
+<%inherit file="layout/one_content_box.html" />
+
+<%block name="title">${_(u"You have been un-enrolled from {course_name}").format(
+        course_name=display_name or course.display_name_with_default_escaped
+    )}</%block>
+
+<%block name="msg_header">
+  ${_("Dear student,")}
+  <br/>
+</%block>
+
+<%block name="msg_content" >
+${_(u"You have been un-enrolled from course {course_name} by a member "
+    "of the course staff. Please disregard the invitation "
+    "previously sent.").format(course_name=course.display_name_with_default_escaped)}
+</%block>

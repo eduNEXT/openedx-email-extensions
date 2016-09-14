@@ -1,7 +1,10 @@
 <%!
-from microsite_configuration.middleware import microsite
 from django.utils.translation import ugettext as _
+from django.utils.translation import get_language_bidi
 %>
+<%def name="text_align()"><%
+    return 'text-align: right' if get_language_bidi() else 'text-align: left'
+%></%def>
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns:fb='http://www.facebook.com/2008/fbml' xmlns:og='http://opengraph.org/schema/'> <head>
 <meta property='og:title' content='Update from {course_title}'/>
@@ -68,7 +71,7 @@ from django.utils.translation import ugettext as _
                         <tbody><tr>
                             <td class='mcnImageContent' valign='top' style='padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom: 0;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;'>
 
-                                    <%include file="${microsite.get_template_path('header_content.html')}" />
+                                    <%include file="header_content.html" />
 
                             </td>
                         </tr>
@@ -192,7 +195,7 @@ from django.utils.translation import ugettext as _
                     <tbody><tr>
 
                         <td valign='top' class='mcnTextContent' style='padding-top: 9px;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #f2f2f2;font-family: Helvetica;font-size: 11px;line-height: 125%;text-align: left;'>
-                            <%include file="${microsite.get_template_path('footer_content.html')}" />
+                            <%include file="footer_content.html" />
                         </td>
                     </tr>
                 </tbody></table>
