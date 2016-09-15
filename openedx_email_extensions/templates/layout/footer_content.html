@@ -1,0 +1,17 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%! from microsite_configuration import microsite %>
+<%
+  footer_override = microsite.get_value('html_email_footer_override',  None)
+%>
+
+% if footer_override:
+    ${ footer_override }
+% else:
+    <p>${_("If you didn't request this, you don't need to do anything."
+    " If you require assistance, please write to us at {TECH_SUPPORT_EMAIL}.").format(TECH_SUPPORT_EMAIL=settings.TECH_SUPPORT_EMAIL)}
+    </p><br>
+    <em>${_(u"Copyright © 2015 eduNEXT, All rights reserved.")}</em><br>
+    <br>
+    <strong>${_(u"Cra 50B 64-77 Of 501 | Bogotá, Colombia")}</strong><br>
+    <br>
+% endif

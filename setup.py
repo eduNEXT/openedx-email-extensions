@@ -46,7 +46,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[],
-    license="Apache Software License 2.0",
+    license="GNU Affero General Public License v3 or later (AGPLv3+)",
     zip_safe=False,
     keywords='Django open-edx',
     classifiers=[
