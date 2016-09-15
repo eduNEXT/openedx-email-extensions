@@ -7,7 +7,8 @@ from path import Path as path
 from django.conf import settings
 
 APP_ROOT = path(__file__).abspath().dirname()
-TEMPLATES_PATH =  APP_ROOT / 'emplates'
+REPO_ROOT = APP_ROOT.dirname()
+TEMPLATES_PATH =  APP_ROOT / 'templates'
 
 ENABLE_MULTIPART_EMAIL = settings.FEATURES.get('ENABLE_MULTIPART_EMAIL', False)
 COMPATIBILITY = {

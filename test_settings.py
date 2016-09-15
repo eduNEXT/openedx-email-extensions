@@ -37,6 +37,12 @@ LOCALE_PATHS = [
     root('openedx_email_extensions', 'conf', 'locale'),
 ]
 
+MIDDLEWARE_CLASSES = tuple()
+
 ROOT_URLCONF = 'openedx_email_extensions.urls'
 
 SECRET_KEY = 'insecure-secret-key'
+
+FEATURES = {
+    "ENABLE_MULTIPART_EMAIL": True,
+}

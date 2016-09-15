@@ -1,4 +1,4 @@
 # Core requirements for using this application
 
-Django                    # Web application framework
-
+Django==1.8.13                    # Web application framework
+mako==1.0.2
