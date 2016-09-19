@@ -4,19 +4,26 @@
 <%!
     from microsite_configuration import microsite
     from django.utils.translation import ugettext as _
-    from openedx.conf import settings
+    from openedx_email_extensions.settings import proxy_settings
 %>
 
-<%block name="title">${_("Message from {PLATFORM_NAME}.").format(PLATFORM_NAME=settings.PLATFORM_NAME)}</%block>
+<%block name="title">${_("Message from {PLATFORM_NAME}.").format(PLATFORM_NAME=proxy_settings.PLATFORM_NAME)}</%block>
 
 <%block name="content_table">
-  <h4 style="color:inherit;font-family:Helvetica,Arial,sans-serif;font-size:24px;font-weight:400;line-height:1.3;margin:0;margin-bottom:24px;padding:0;${text_align()};word-wrap:normal">
+  <%
+    email_body__color = proxy_settings.EMAIL_COLORS['email_body__color']
+    email_button__color = proxy_settings.EMAIL_COLORS['email_button__color']
+    email_button__background = proxy_settings.EMAIL_COLORS['email_button__background']
+    email_button__border = proxy_settings.EMAIL_COLORS['email_button__border']
+  %>
+
+  <h4 style="color:${email_body__color};font-family:Helvetica,Arial,sans-serif;font-size:24px;font-weight:400;line-height:1.3;margin:0;margin-bottom:24px;padding:0;${text_align()};word-wrap:normal">
     <%block name="msg_header" >${_("Message")}</%block>
   </h4>
-  <p style="color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;${text_align()}">
+  <p style="color:${email_body__color};font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;${text_align()}">
     <%block name="msg_content" >${_("This message was generated automatically.")}</%block>
   </p>
-  <p style="color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;${text_align()}">
+  <p style="color:${email_body__color};font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;${text_align()}">
     <%block name="msg_content_2" ></%block>
   </p>
 
@@ -32,12 +39,12 @@
     <table class="button float-center" style="border-collapse:collapse;border-spacing:0;float:none;margin:0 0 16px 0;padding:0;text-align:center;vertical-align:top;width:auto">
       <tbody>
         <tr style="padding:0;${text_align()};vertical-align:top">
-          <td style="-moz-hyphens:auto;-webkit-hyphens:auto;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;${text_align()};vertical-align:top;word-wrap:break-word">
+          <td style="-moz-hyphens:auto;-webkit-hyphens:auto;border-collapse:collapse!important;color:${email_body__color};font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;${text_align()};vertical-align:top;word-wrap:break-word">
             <table style="border-collapse:collapse;border-spacing:0;padding:0;${text_align()};vertical-align:top;width:100%">
               <tbody>
                 <tr style="padding:0;${text_align()};vertical-align:top">
-                  <td style="-moz-hyphens:auto;-webkit-hyphens:auto;background:#2199e8;border:2px solid #2199e8;border-collapse:collapse!important;color:#fefefe;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;${text_align()};vertical-align:top;word-wrap:break-word">
-                    <a href="<%block name="call_to_action_href" >#</%block>" style="border:0 solid #2199e8;border-radius:3px;color:#fefefe;display:inline-block;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:1.3;margin:0;padding:8px 16px 8px 16px;${text_align()};text-decoration:none" target="_blank"><%block name="call_to_action_label">${_("Action")}</%block></a>
+                  <td style="-moz-hyphens:auto;-webkit-hyphens:auto;background:${email_button__background};border:2px solid ${email_button__border};border-collapse:collapse!important;color:${email_button__color};font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;${text_align()};vertical-align:top;word-wrap:break-word">
+                    <a href="<%block name="call_to_action_href" >#</%block>" style="border:0 solid ${email_button__border};border-radius:3px;color:${email_button__color};display:inline-block;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:1.3;margin:0;padding:8px 16px 8px 16px;${text_align()};text-decoration:none" target="_blank"><%block name="call_to_action_label">${_("Action")}</%block></a>
                   </td>
                 </tr>
               </tbody>

@@ -1,7 +1,7 @@
 ## mako
 <%!
-from microsite_configuration import microsite
 from django.utils.translation import ugettext as _
+from openedx_email_extensions.settings import proxy_settings
 %>
 <%inherit file="layout/one_content_box.html" />
 
@@ -18,11 +18,11 @@ from django.utils.translation import ugettext as _
 		"{platform_name} from {old_email} to {new_email}. If you "
 		"did not make this request, please contact us immediately. Contact "
 		"information is listed at:").format(
-			platform_name=settings.PLATFORM_NAME,
+			platform_name=proxy_settings.PLATFORM_NAME,
 			old_email=old_email,
 			new_email=new_email
 		)}
-	${settings.CONTACT_EMAIL}
+	${proxy_settings.CONTACT_EMAIL}
 </%block>
 <%block name="msg_content_2" >
 	${_("We keep a log of old e-mails, so if this request was unintentional, we "

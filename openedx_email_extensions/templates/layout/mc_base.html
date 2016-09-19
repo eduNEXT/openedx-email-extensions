@@ -2,6 +2,7 @@
 <%!
 from django.utils.translation import ugettext as _
 from django.utils.translation import get_language_bidi
+from openedx_email_extensions.settings import proxy_settings
 %>
 <%def name="text_align()">
   <%
@@ -21,8 +22,12 @@ from django.utils.translation import get_language_bidi
     </style>
   </head>
 
+<%
+  email_wrapper__background = proxy_settings.EMAIL_COLORS.get('email_wrapper__background')
+  email_body__background = proxy_settings.EMAIL_COLORS.get('email_body__background')
+%>
   <body>
-    <table class="body" style="background:#f3f3f3;border-collapse:collapse;border-spacing:0;height:100%;margin:0;padding:0;vertical-align:top;width:100%">
+    <table class="body" style="background:${email_wrapper__background};border-collapse:collapse;border-spacing:0;height:100%;margin:0;padding:0;vertical-align:top;width:100%">
       <tbody>
         <tr style="padding:0;${text_align()};vertical-align:top">
           <td class="float-center" align="center" valign="top" style="-moz-hyphens:auto;-webkit-hyphens:auto;border-collapse:collapse!important;float:none;hyphens:auto;margin:0 auto;padding:0;text-align:center;vertical-align:top;word-wrap:break-word">
@@ -39,7 +44,7 @@ from django.utils.translation import get_language_bidi
               <!-- // END PREHEADER -->
 
               <!-- BEGIN HEADER // -->
-              <table align="center" class="container header float-center" style="background:#fefefe;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;min-width:480px;width:100%;max-width:580px">
+              <table align="center" class="container header float-center" style="background:${email_body__background};border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;min-width:480px;width:100%;max-width:580px">
                 <tbody>
                   <tr style="padding:0;${text_align()};vertical-align:top">
                     <td style="-moz-hyphens:auto;-webkit-hyphens:auto;border-collapse:collapse!important;hyphens:auto;margin:0;padding:0;vertical-align:top;word-wrap:break-word">
@@ -66,7 +71,7 @@ from django.utils.translation import get_language_bidi
 
 
               <!-- BEGIN BODY // -->
-              <table align="center" class="container BODY float-center" style="background:#fefefe;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;min-width:480px;width:100%;max-width:580px">
+              <table align="center" class="container BODY float-center" style="background:${email_body__background};border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;min-width:480px;width:100%;max-width:580px">
                 <tbody>
                   <tr style="padding:0;${text_align()};vertical-align:top">
                     <td style="-moz-hyphens:auto;-webkit-hyphens:auto;border-collapse:collapse!important;hyphens:auto;margin:0;padding:0;${text_align()};vertical-align:top;word-wrap:break-word">
@@ -115,7 +120,7 @@ from django.utils.translation import get_language_bidi
 
 
               <!-- BEGIN FOOTER // -->
-              <table align="center" class="container footer float-center" style="background:#fefefe;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;min-width:480px;width:100%;max-width:580px">
+              <table align="center" class="container footer float-center" style="background:${email_body__background};border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;min-width:480px;width:100%;max-width:580px">
                 <tbody>
                   <tr style="padding:0;${text_align()};vertical-align:top">
                     <th class="small-12 large-12 columns first last" style="margin:0 auto;padding:0;padding-bottom:16px;padding-left:24px;padding-right:24px;width:100%">
@@ -124,7 +129,12 @@ from django.utils.translation import get_language_bidi
                           <tr style="padding:0;${text_align()};vertical-align:top">
                             <th>
 
-                              <%include file="social_content.html" />
+                              <%
+                                extra_footer_template = proxy_settings.EXTRA_FOOTER_TEMPLATE
+                              %>
+                              % if extra_footer_template:
+                                <%include file="${extra_footer_template}" />
+                              % endif
 
                               <center data-parsed="" style="min-width:432px;width:100%">
                                 <table align="center" class="menu float-center" style="border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:auto!important">
