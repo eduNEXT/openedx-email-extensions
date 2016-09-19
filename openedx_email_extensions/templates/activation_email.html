@@ -12,26 +12,24 @@ ${_("Account activation")}
 </%block>
 
 <%block name="msg_header">
-${_("Thank you for creating an account with {platform_name}!").format(
-    platform_name=configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)
-)}
-<br/>
+  ${_("Thank you for creating an account with {platform_name}!").format(
+      platform_name=configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)
+  )}
 </%block>
 
 <%block name="msg_content" >
-
-${_("There's just one more step before you can enroll in a course: "
+  ${_("There's just one more step before you can enroll in a course: "
     "you need to activate your {platform_name} account. To activate "
     "your account, click the button below.").format(
         platform_name=configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)
-    )}
-<br/>
-<br/>
-${_("If you didn't create an account, you don't need to do anything; you "
+  )}
+</%block>
+
+<%block name="msg_content_2" >
+  ${_("If you didn't create an account, you don't need to do anything; you "
       "won't receive any more email from us. If you need assistance, please "
       "do not reply to this email message. Check the help section of the "
       "{platform_name} website.").format(platform_name=configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME))}
-<br/>
 </%block>
 
 <%block name="call_to_action_href">
