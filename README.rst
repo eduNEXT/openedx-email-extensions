@@ -19,6 +19,21 @@ This django application is to be used together with the openedx platform. It
 makes it easy for a fork administrator to convert outgoing emails to a multipart
 format that support both text and html.
 
+How to install
+--------------
+```
+git clone https://github.com/eduNEXT/openedx-email-extensions.git
+cd openedx-email-extensions/
+mkdir ../VENVS
+virtualenv ../VENVS/openedx-email-extensions
+source ../VENVS/openedx-email-extensions/bin/activate
+make requirements
+```
+
+How to run for dev
+------------------
+./manage.py render_templates
+
 License
 -------
 

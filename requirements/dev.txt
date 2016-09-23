@@ -35,6 +35,7 @@ twine==1.8.1
 virtualenv==15.0.3        # via tox
 wheel==0.29.0
 wrapt==1.10.8             # via astroid
+mock==2.0.0
 
 # The following packages are commented out because they are
 # considered to be unsafe in a requirements file:
