@@ -7,10 +7,12 @@
 -e git+https://github.com/edx/i18n-tools.git@v0.3.2#egg=i18n_tools==0.3.2
 args==0.1.0               # via clint
 astroid==1.4.8            # via pylint, pylint-celery, pylint-plugin-utils
+babel==2.3.4              # via django-babel
 click==6.6                # via pip-tools
 clint==0.5.1              # via twine
 colorama==0.3.7           # via pylint
 ddt==1.1.0
+django-babel==0.5.1
 edx-lint==0.5.1
 first==2.0.1              # via pip-tools
 lazy-object-proxy==1.2.2  # via astroid
@@ -24,7 +26,7 @@ pylint-celery==0.3        # via edx-lint
 pylint-django==0.7.2      # via edx-lint
 pylint-plugin-utils==0.2.4  # via pylint-celery, pylint-django
 pylint==1.5.4             # via edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
-pytz==2016.6.1
+pytz==2016.6.1            # via babel
 pyYaml==3.12
 requests-toolbelt==0.7.0  # via twine
 requests==2.11.1          # via requests-toolbelt, twine
@@ -35,7 +37,7 @@ twine==1.8.1
 virtualenv==15.0.3        # via tox
 wheel==0.29.0
 wrapt==1.10.8             # via astroid
-mock==2.0.0
+mock==2.0.0               # Via manually added. pip-compile breaks
 
 # The following packages are commented out because they are
 # considered to be unsafe in a requirements file:

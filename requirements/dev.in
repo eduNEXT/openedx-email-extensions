@@ -7,4 +7,5 @@ tox                       # virtualenv management for tests
 tox-battery               # Makes tox aware of requirements file changes
 twine                     # Utility for PyPI package uploads
 wheel                     # For generation of wheels for PyPI
-mock                      # To use MagicMock
+django-babel              # For string extraction
+# mock                    # To use MagicMock, but pip-tools breaks
