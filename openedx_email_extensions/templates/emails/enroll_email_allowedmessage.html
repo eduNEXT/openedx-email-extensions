@@ -1,8 +1,9 @@
 ## mako
 <%!
     from django.utils.translation import ugettext as _
+    from openedx_email_extensions.utils import template_path_finder
 %>
-<%inherit file="layout/one_call_to_action.html" />
+<%inherit file="${ template_path_finder('/email_layout/one_call_to_action.html') }" />
 
 <%block name="msg_header">
   ${_("Dear student,")}

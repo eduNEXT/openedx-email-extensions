@@ -18,14 +18,14 @@ TEMPLATES_PATH =  APP_ROOT / 'templates'
 
 ENABLE_MULTIPART_EMAIL = settings.FEATURES.get('ENABLE_MULTIPART_EMAIL', False)
 COMPATIBILITY = {
-    "registration/password_reset_email.html": "password_reset_email_html.html",
-    "emails/activation_email.txt": "activation_email.html",
-    "emails/email_change.txt": "email_change.html",
-    "emails/confirm_email_change.txt": "confirm_email_change.html",
-    "emails/enroll_email_allowedmessage.txt": "enroll_email_allowedmessage.html",
-    "emails/enroll_email_enrolledmessage.txt": "enroll_email_enrolledmessage.html",
-    "emails/unenroll_email_allowedmessage.txt": "unenroll_email_allowedmessage.html",
-    "emails/unenroll_email_enrolledmessage.txt": "unenroll_email_enrolledmessage.html",
+    "registration/password_reset_email.html": "registration/password_reset_email_html.html",
+    "emails/activation_email.txt": "emails/activation_email.html",
+    "emails/email_change.txt": "emails/email_change.html",
+    "emails/confirm_email_change.txt": "emails/confirm_email_change.html",
+    "emails/enroll_email_allowedmessage.txt": "emails/enroll_email_allowedmessage.html",
+    "emails/enroll_email_enrolledmessage.txt": "emails/enroll_email_enrolledmessage.html",
+    "emails/unenroll_email_allowedmessage.txt": "emails/unenroll_email_allowedmessage.html",
+    "emails/unenroll_email_enrolledmessage.txt": "emails/unenroll_email_enrolledmessage.html",
 }
 
 DEFAULT_EXTRA_FOOTER_TEMPLATE = None

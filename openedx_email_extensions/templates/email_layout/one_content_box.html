@@ -1,12 +1,12 @@
 ## mako
-<%inherit file="mc_base.html" />
-<%namespace file='mc_base.html' import="text_align"/>
 <%!
-  from microsite_configuration import microsite
   from django.utils.translation import ugettext as _
   from openedx.conf import settings
   from openedx_email_extensions.settings import proxy_settings
+  from openedx_email_extensions.utils import template_path_finder
 %>
+<%inherit file="${ template_path_finder('/email_layout/mc_base.html') }" />
+<%namespace file='mc_base.html' import="text_align"/>
 
 <%block name="title">${_("Message from {PLATFORM_NAME}.").format(PLATFORM_NAME=proxy_settings.PLATFORM_NAME)}</%block>
 

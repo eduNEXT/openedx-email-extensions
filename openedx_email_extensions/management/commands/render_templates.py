@@ -22,8 +22,12 @@ def _fake_everything():
     def fake_get_value(value, default):
         return default
 
+    def fake_get_template_path(value):
+        return value
+
     fake_microsite = mock.Mock()
     fake_microsite.microsite.get_value = fake_get_value
+    fake_microsite.microsite.get_template_path = fake_get_template_path
 
     sys.modules["microsite_configuration"] = fake_microsite
     sys.modules["openedx.core.djangoapps.site_configuration"] = fake_microsite
