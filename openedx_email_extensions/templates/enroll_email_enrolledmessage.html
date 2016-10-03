@@ -1,15 +1,14 @@
 ## mako
 <%!
     from django.utils.translation import ugettext as _
-    from openedx.conf import settings
+    from openedx_email_extensions.settings import proxy_settings
 %>
 <%inherit file="layout/one_call_to_action.html" />
 
-<%block name="title">${_("Message from {PLATFORM_NAME}.").format(PLATFORM_NAME=settings.PLATFORM_NAME)}</%block>
+<%block name="title">${_("Message from {PLATFORM_NAME}.").format(PLATFORM_NAME=proxy_settings.PLATFORM_NAME)}</%block>
 
 <%block name="msg_header">
   ${_(u"Dear {full_name}").format(full_name=full_name)}
-  <br/>
 </%block>
 
 <%block name="msg_content" >

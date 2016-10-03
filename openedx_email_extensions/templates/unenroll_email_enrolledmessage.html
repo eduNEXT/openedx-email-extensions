@@ -1,27 +1,26 @@
 ## mako
 <%!
     from django.utils.translation import ugettext as _
-    from microsite_configuration import microsite
+    from openedx_email_extensions.settings import proxy_settings
 %>
 <%inherit file="layout/one_content_box.html" />
 
-<%block name="title">${_("Message from {PLATFORM_NAME}.").format(PLATFORM_NAME=settings.PLATFORM_NAME)}</%block>
+<%block name="title">${_("Message from {PLATFORM_NAME}.").format(PLATFORM_NAME=proxy_settings.PLATFORM_NAME)}</%block>
 
 <%block name="msg_header">
   ${_(u"Dear {full_name}").format(full_name=full_name)}
-  <br/>
 </%block>
 
 <%block name="msg_content" >
-${_(u"You have been un-enrolled in {course_name} at {site_name} by a member "
+  ${_(u"You have been un-enrolled in {course_name} at {site_name} by a member "
     "of the course staff. The course will no longer appear on your "
     "{site_name} dashboard.").format(
         course_name=display_name or course.display_name_with_default_escaped, site_name=site_name
-    )}
+    )
+  }
 </%block>
 
 <%block name="msg_content_2" >
   ${_("Your other courses have not been affected.")}
-  <br/>
 </%block>
 
