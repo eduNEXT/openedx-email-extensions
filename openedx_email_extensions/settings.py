@@ -42,6 +42,9 @@ DEFAULT_EMAIL_COLORS = {
   "email_footer__color_small": "#B1B1B1"
 }
 
+DEFAULT_EMAIL_LOGO_PATH = "http://placehold.it/600x142"
+
+
 class ProxySettings(object):
     """
     This object is a proxy for the django.conf settings object. It defaults to a 
