@@ -2,8 +2,9 @@
 <%!
 from django.utils.translation import ugettext as _
 from openedx_email_extensions.settings import proxy_settings
+from openedx_email_extensions.utils import template_path_finder
 %>
-<%inherit file="layout/one_content_box.html" />
+<%inherit file="${ template_path_finder('/email_layout/one_content_box.html') }" />
 
 <%block name="title">
 	${_("Email change")}

@@ -9,7 +9,12 @@ from django.conf import settings
 from django.template import loader, TemplateDoesNotExist
 
 from openedx_email_extensions import settings
-from edxmako import add_lookup, LOOKUP
+
+try:
+    from microsite_configuration import microsite
+except ImportError:
+    microsite = False
+
 
 log = logging.getLogger(__name__)
 
@@ -33,3 +38,11 @@ def get_html_message(context, template=None, base=None):
     except TemplateDoesNotExist:
         log.warning("We tried to render an unexistant template for {}".format(html_template))
         return None
+
+
+def template_path_finder(template_path):
+    """
+    """
+    if microsite:
+        return "/{}".format(microsite.get_template_path(template_path[1:]))
+    return template_path        
