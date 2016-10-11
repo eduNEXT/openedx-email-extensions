@@ -70,4 +70,4 @@ requirements/private.txt
 tests/__init__.py
 
 # Rendered templates
-rendered/*.html
+rendered/*
