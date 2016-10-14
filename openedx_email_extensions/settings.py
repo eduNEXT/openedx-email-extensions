@@ -37,6 +37,7 @@ DEFAULT_EMAIL_COLORS = {
   "email_button__color": "#FEFEFE",
   "email_button__background": "#2DAAE1",
   "email_button__border": "#2DAAE1",
+  "email_footer__background": "#F3F3F3",
   "email_footer__color": "#0A0A0A",
   "email_footer__color_link": "#2DAAE1",
   "email_footer__color_small": "#B1B1B1"
