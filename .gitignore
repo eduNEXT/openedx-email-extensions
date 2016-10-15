@@ -31,7 +31,7 @@ coverage.xml
 htmlcov/
 
 # Translations
-*.mo
+# *.mo  ## for simplicity we will comit this for now
 
 # IDEs and text editors
 *~
