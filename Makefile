@@ -44,7 +44,7 @@ dummy_translations: ## generate dummy translation (.po) files
 
 extract_translations: ## extract strings to be translated, outputting .mo files
 	pybabel extract -F openedx_email_extensions/locale/babel.cfg -o openedx_email_extensions/locale/django.pot .
-	pybabel update -N -i openedx_email_extensions/locale/django.pot
+	pybabel update -N -D django -i openedx_email_extensions/locale/django.pot -d openedx_email_extensions/locale/
 	rm openedx_email_extensions/locale/django.pot
 
 compile_translations: ## compile .mo files into .po files
