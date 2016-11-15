@@ -44,6 +44,7 @@ DEFAULT_EMAIL_COLORS = {
 }
 
 DEFAULT_EMAIL_LOGO_PATH = "http://placehold.it/600x142"
+DEFAULT_EMAIL_UNSUBSCRIBE_LINKS = False
 
 
 class ProxySettings(object):

@@ -138,6 +138,13 @@ from openedx_email_extensions.utils import template_path_finder
                                 <%include file="${ template_path_finder(extra_footer_template) }" />
                               % endif
 
+                              <%
+                                unsubscribe_links = proxy_settings.EMAIL_UNSUBSCRIBE_LINKS
+                              %>
+                              % if unsubscribe_links:
+                                <%include file="${ template_path_finder('/email_layout/unsubscribe_links.html') }" />
+                              % endif
+
                               <center data-parsed="" style="min-width:432px;width:100%">
                                 <table align="center" class="menu float-center" style="border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:auto!important">
                                   <tbody>

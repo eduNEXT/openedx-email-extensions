@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2016-11-15 12:33-0500\n"
+"POT-Creation-Date: 2016-11-15 14:35-0500\n"
 "PO-Revision-Date: 2016-10-14 17:02-0500\n"
 "Last-Translator: \n"
 "Language: es_419\n"
@@ -50,6 +50,10 @@ msgstr "Este mensaje fue generado automáticamente."
 #: openedx_email_extensions/templates/email_layout/one_call_to_action.html:47
 msgid "Action"
 msgstr "Acción"
+
+#: openedx_email_extensions/templates/email_layout/unsubscribe_links.html:7
+msgid "Unsubscribe here"
+msgstr "Modifique su subscripción aquí"
 
 #: openedx_email_extensions/templates/emails/activation_email.html:11
 msgid "Account activation"
