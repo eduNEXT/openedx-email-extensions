@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2016-10-07 18:00-0500\n"
+"POT-Creation-Date: 2016-11-15 12:33-0500\n"
 "PO-Revision-Date: 2016-10-07 18:00-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 
 #: openedx_email_extensions/templates/email_layout/mc_base.html:19
-msgid "Message from edX"
+msgid "Message from {PLATFORM_NAME}"
 msgstr ""
 
 #: openedx_email_extensions/templates/email_layout/one_call_to_action.html:10
@@ -229,4 +229,7 @@ msgstr ""
 #: openedx_email_extensions/templates/registration/password_reset_email_html.html:24
 msgid "Change my password"
 msgstr ""
+
+#~ msgid "Message from edX"
+#~ msgstr ""
 

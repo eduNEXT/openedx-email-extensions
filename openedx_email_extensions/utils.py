@@ -45,4 +45,4 @@ def template_path_finder(template_path):
     """
     if microsite:
         return "/{}".format(microsite.get_template_path(template_path[1:]))
-    return template_path        
+    return template_path
