@@ -20,11 +20,11 @@ msgstr ""
 
 #: openedx_email_extensions/templates/email_layout/footer_content.html:17
 msgid "If you didn't request this, you don't need to do anything. If you require assistance, please write to us at {TECH_SUPPORT_EMAIL}."
-msgstr "Se você não solicitou esta, você não precisa fazer nada. Se precisar de ajuda, por favor escreva-nos para {TECH_SUPPORT_EMAIL}."
+msgstr "Se você não solicitou isso, você não precisa fazer nada. Se precisar de ajuda, por favor escreva-nos para {TECH_SUPPORT_EMAIL}."
 
 #: openedx_email_extensions/templates/email_layout/mc_base.html:19
 msgid "Message from {PLATFORM_NAME}"
-msgstr "Mensagem do {PLATFORM_NAME} "
+msgstr "Mensagem de {PLATFORM_NAME}"
 
 #: openedx_email_extensions/templates/email_layout/one_call_to_action.html:10
 #: openedx_email_extensions/templates/email_layout/one_content_box.html:11
@@ -45,7 +45,7 @@ msgstr "Esta mensagem foi gerada automaticamente."
 
 #: openedx_email_extensions/templates/email_layout/one_call_to_action.html:47
 msgid "Action"
-msgstr "Açao"
+msgstr "Ação"
 
 #: openedx_email_extensions/templates/emails/activation_email.html:11
 msgid "Account activation"
@@ -57,11 +57,11 @@ msgstr "Obrigado por criar uma conta com {platform_name}!"
 
 #: openedx_email_extensions/templates/emails/activation_email.html:21
 msgid "There's just one more step before you can enroll in a course: you need to activate your {platform_name} account. To activate your account, click the button below."
-msgstr "Há apenas mais um passo antes que você pode se inscrever em um curso: o que você precisa para ativar sua conta {platform_name}. Para ativar sua conta, clique no botão abaixo."
+msgstr "Há apenas mais um passo antes de você poder se inscrever em um curso: você precisa para ativar sua conta {platform_name}. Para ativar sua conta, clique no botão abaixo."
 
 #: openedx_email_extensions/templates/emails/activation_email.html:29
 msgid "If you didn't create an account, you don't need to do anything; you won't receive any more email from us. If you need assistance, please do not reply to this email message. Check the help section of the {platform_name} website."
-msgstr "Se você não criar uma conta, você não precisa fazer nada; você não receberá mais e-mails de nós. Se precisar de ajuda, por favor, não responda a esta mensagem de e-mail. Verifique a seção de ajuda da {platform_name} website."
+msgstr "Se você não criou uma conta, você não precisa fazer nada; você não receberá mais e-mails de nós. Se precisar de ajuda, por favor, não responda a esta mensagem de e-mail. Verifique a seção de ajuda do website de {platform_name}."
 
 #: openedx_email_extensions/templates/emails/activation_email.html:43
 msgid "Activate account"
@@ -70,15 +70,15 @@ msgstr "Ativar conta"
 #: openedx_email_extensions/templates/emails/confirm_email_change.html:10
 #: openedx_email_extensions/templates/emails/confirm_email_change.html:14
 msgid "Email change"
-msgstr "Mudança de email"
+msgstr "Mudança de e-mail"
 
 #: openedx_email_extensions/templates/emails/confirm_email_change.html:18
 msgid "This is to confirm that you changed the e-mail associated with {platform_name} from {old_email} to {new_email}. If you did not make this request, please contact us immediately. Contact information is listed at:"
-msgstr "Isto é para confirmar que você mudou o e-mail associado à {platform_name} de {old_email} para {new_email}. Se você não fez esta solicitação, entre em contato conosco imediatamente. informações de contato são listados em:"
+msgstr "Isto é para confirmar que você mudou o e-mail associado à {platform_name} de {old_email} para {new_email}. Se você não fez esta solicitação, entre em contato conosco imediatamente. Informações de contato são listadas em:"
 
 #: openedx_email_extensions/templates/emails/confirm_email_change.html:29
 msgid "We keep a log of old e-mails, so if this request was unintentional, we can investigate."
-msgstr "Nós manter um registro de e-mails antigos, por isso, se este pedido não foi intencional, podemos investigar."
+msgstr "Nós mantemos um registro de e-mails antigos, por isso, se este pedido não foi intencional, podemos investigar."
 
 #: openedx_email_extensions/templates/emails/email_change.html:11
 #: openedx_email_extensions/templates/emails/email_change.html:15
@@ -87,44 +87,44 @@ msgstr "Solicitar a alteração de e-mail"
 
 #: openedx_email_extensions/templates/emails/email_change.html:19
 msgid "We received a request to change the e-mail associated with your {platform_name} account from {old_email} to {new_email}. If this is correct, please confirm your new e-mail address by visiting:"
-msgstr "Recebemos um pedido para alterar o e-mail associado à sua {platform_name} conta de {old_email} para {new_email}. Se isso é correto, por favor confirme o seu novo endereço de e-mail, visite:"
+msgstr "Recebemos um pedido para alterar o e-mail associado à sua {platform_name} conta de {old_email} para {new_email}. Se isso está correto, por favor confirme o seu novo endereço de e-mail visitando:"
 
 #: openedx_email_extensions/templates/emails/email_change.html:30
 msgid "If you didn't request this, you don't need to do anything; you won't receive any more email from us. Please do not reply to this e-mail; if you require assistance, check the help section of the {platform_name} web site."
-msgstr "Se você não solicitou esta, você não precisa fazer nada; você não receberá mais e-mails de nós. Por favor não responda esse email; Se precisar de ajuda, consulte a seção de ajuda da web {platform_name} site."
+msgstr "Se você não solicitou isso, você não precisa fazer nada; você não receberá mais e-mails de nós. Por favor não responda este e-mail; se precisar de ajuda, consulte a seção de ajuda do website de {platform_name}."
 
 #: openedx_email_extensions/templates/emails/email_change.html:44
 msgid "Confirm change"
-msgstr "confirmar alteração"
+msgstr "Confirmar alteração"
 
 #: openedx_email_extensions/templates/emails/enroll_email_allowedmessage.html:9
 #: openedx_email_extensions/templates/emails/unenroll_email_allowedmessage.html:12
 msgid "Dear student,"
-msgstr "Caro estudante,"
+msgstr "Caro(a) estudante,"
 
 #: openedx_email_extensions/templates/emails/enroll_email_allowedmessage.html:13
 msgid "You have been invited to join {course_name} at {site_name} by a member of the course staff."
-msgstr "Você foi convidado para se juntar {course_name} em {site_name} por um membro da equipe do curso."
+msgstr "Você foi convidado para participar do curso {course_name} em {site_name} por um membro da equipe do curso."
 
 #: openedx_email_extensions/templates/emails/enroll_email_allowedmessage.html:25
 msgid "To access the course visit {course_url} and login."
-msgstr "Para acessar a visita claro {course_url} e login."
+msgstr "Para acessar o curso visite {course_url} e faça login."
 
 #: openedx_email_extensions/templates/emails/enroll_email_allowedmessage.html:28
 msgid "To access the course visit {course_about_url} and register for the course."
-msgstr "Para acessar a visita claro {course_about_url} e se inscrever para o curso."
+msgstr "Para acessar o curso visite {course_about_url} e se inscreva para o curso."
 
 #: openedx_email_extensions/templates/emails/enroll_email_allowedmessage.html:33
 msgid "To finish your registration, please visit {registration_url} and fill out the registration form making sure to use {email_address} in the E-mail field."
-msgstr "Para terminar a sua inscrição, visite {registration_url} e preencher o formulário de inscrição certificando-se de usar {email_address} no campo E-mail."
+msgstr "Para terminar a sua inscrição, visite {registration_url} e preencha o formulário de inscrição certificando-se de usar {email_address} no campo E-mail."
 
 #: openedx_email_extensions/templates/emails/enroll_email_allowedmessage.html:40
 msgid "Once you have registered and activated your account, you will see {course_name} listed on your dashboard."
-msgstr "Depois de ter registado e activado a sua conta, você verá {course_name} listados no painel de instrumentos."
+msgstr "Depois de ter se inscrito e ativado a sua conta, você verá {course_name} listado no seu painel."
 
 #: openedx_email_extensions/templates/emails/enroll_email_allowedmessage.html:45
 msgid "Once you have registered and activated your account, visit {course_about_url} to join the course."
-msgstr "Depois de ter registado e activado a sua conta, visite {course_about_url} para participar do curso."
+msgstr "Depois de ter se inscrito e ativado a sua conta, visite {course_about_url} para participar do curso."
 
 #: openedx_email_extensions/templates/emails/enroll_email_allowedmessage.html:48
 msgid "You can then enroll in {course_name}."
@@ -132,7 +132,7 @@ msgstr "Você pode então se inscrever em {course_name}."
 
 #: openedx_email_extensions/templates/emails/enroll_email_allowedmessage.html:55
 msgid "Go to register"
-msgstr "Ir para registar"
+msgstr "Se inscrever"
 
 #: openedx_email_extensions/templates/emails/enroll_email_enrolledmessage.html:12
 #: openedx_email_extensions/templates/emails/unenroll_email_enrolledmessage.html:13
@@ -141,7 +141,7 @@ msgstr "Caro {full_name}"
 
 #: openedx_email_extensions/templates/emails/enroll_email_enrolledmessage.html:16
 msgid "You have been enrolled in {course_name} at {site_name} by a member of the course staff. The course should now appear on your {site_name} dashboard."
-msgstr "Você foi inscrito no {course_name} em {site_name} por um membro da equipe do curso. O curso deve aparecer agora na sua {site_name} painel."
+msgstr "Você foi inscrito no {course_name} em {site_name} por um membro da equipe do curso. O curso deve aparecer agora no seu painel em {site_name}."
 
 #: openedx_email_extensions/templates/emails/enroll_email_enrolledmessage.html:23
 msgid "To start accessing course materials, please visit {course_url} or use the button below."
@@ -153,15 +153,15 @@ msgstr "Leve-me lá"
 
 #: openedx_email_extensions/templates/emails/unenroll_email_allowedmessage.html:9
 msgid "You have been un-enrolled from {course_name}"
-msgstr "Você foi un-inscritos de {course_name}"
+msgstr "Sua inscrição de {course_name} foi cancelada"
 
 #: openedx_email_extensions/templates/emails/unenroll_email_allowedmessage.html:16
 msgid "You have been un-enrolled from course {course_name} by a member of the course staff. Please disregard the invitation previously sent."
-msgstr "Você tem sido un-inscritos de curso {course_name} por um membro da equipe do curso. Por favor desconsidere o convite enviado anteriormente."
+msgstr "Você teve sua inscrição cancelada de {course_name} por um membro da equipe do curso. Por favor desconsidere o convite enviado anteriormente."
 
 #: openedx_email_extensions/templates/emails/unenroll_email_enrolledmessage.html:17
 msgid "You have been un-enrolled in {course_name} at {site_name} by a member of the course staff. The course will no longer appear on your {site_name} dashboard."
-msgstr "Você tem sido un-matriculados em {course_name} em {site_name} por um membro da equipe do curso. O curso não aparecerá mais na sua {site_name} painel."
+msgstr "Você teve sua inscrição cancelada em {course_name} em {site_name} por um membro da equipe do curso. O curso não aparecerá mais no seu painel de {site_name}."
 
 #: openedx_email_extensions/templates/emails/unenroll_email_enrolledmessage.html:26
 msgid "Your other courses have not been affected."
@@ -177,11 +177,11 @@ msgstr "Resetar a senha"
 
 #: openedx_email_extensions/templates/registration/password_reset_email_html.html:15
 msgid "You are receiving this email because you requested a password change in "
-msgstr "Você está recebendo este e-mail porque solicitou uma alteração de senha no"
+msgstr "Você está recebendo este e-mail porque solicitou uma alteração de senha no "
 
 #: openedx_email_extensions/templates/registration/password_reset_email_html.html:19
 msgid "If you didn't request this change, you can disregard this email - we have not yet reset your password."
-msgstr "Se você não solicitou esta mudança, você pode desconsiderar este e-mail - que ainda não redefinir sua senha."
+msgstr "Se você não solicitou esta mudança, você pode desconsiderar este e-mail - nós ainda não mudamos sua senha."
 
 #: openedx_email_extensions/templates/registration/password_reset_email_html.html:24
 msgid "Change my password"
@@ -189,4 +189,3 @@ msgstr "Mudar minha senha"
 
 #~ msgid "Message from edX"
 #~ msgstr ""
-
