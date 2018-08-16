@@ -251,7 +251,8 @@ msgid ""
 "You are receiving this email because you requested a password change in "
 "{site_name}"
 msgstr ""
-"كنت تتلقى هذا البريد الإلكتروني لأنك طلبت تغيير كلمة المرور في{site_name}"
+"كنت تتلقى هذا البريد الإلكتروني لأنك طلبت تغيير كلمة المرور في "
+"{site_name}"
 
 #: openedx_email_extensions/templates/registration/password_reset_email_html.html:19
 msgid ""
