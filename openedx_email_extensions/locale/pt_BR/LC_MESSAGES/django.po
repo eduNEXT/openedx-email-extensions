@@ -260,7 +260,7 @@ msgid ""
 "You are receiving this email because you requested a password change in "
 "{site_name}"
 msgstr ""
-"Você está recebendo este e-mail porque solicitou uma alteração de senha no"
+"Você está recebendo este e-mail porque solicitou uma alteração de senha no "
 "{site_name}"
 
 #: openedx_email_extensions/templates/registration/password_reset_email_html.html:19
