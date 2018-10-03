@@ -17,6 +17,14 @@ msgstr ""
 "Language: es_419\n"
 "X-Generator: Poedit 1.5.4\n"
 
+#: openedx_email_extensions/templates/email_layout/footer_content.html:14
+msgid "Copyright"
+msgstr "Derechos de autor"
+
+#: openedx_email_extensions/templates/email_layout/footer_content.html:14
+msgid "All rights reserved"
+msgstr "Todos los derechos reservados"
+
 #: openedx_email_extensions/templates/email_layout/footer_content.html:17
 msgid ""
 "If you didn't request this, you don't need to do anything. If you require "
